@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/imagenFondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cactus"
+        android:scaleType="fitEnd"/>
+
+    <ImageView
+        android:id="@+id/iconoCactus"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_cactus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.8"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iconoCactus">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Password"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="LOG IN"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/LinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="INVITADO"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/LinearLayout"
+        app:layout_constraintStart_toEndOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout" />
+    <!--aqui decidimos la posicion de la foto Linea19 -->
+
+    <LinearLayout
+        android:id="@+id/LinearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="32dp"
+        android:alpha="0.8"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/button2"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintStart_toStartOf="@id/button2"
+        app:layout_constraintTop_toBottomOf="@id/button2">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="LOG IN" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:text="INVITADO"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/signup_text"
+        android:layout_width="260dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:text="Have you got an account? Register"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout2"
+        android:layout_marginTop="16dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/signup_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Aún no tienes cuenta?"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_ir_crearCuenta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="REGÍSTRATE"
+            android:textColor="@drawable/botonregistrar"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/boton_login"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/botonestilo_seleccionar"
+        android:text="INICIAR SESION"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/LinearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout3" />
+
+    <Button
+        android:id="@+id/boton_profesor"
+        android:text="Go PRO"
+        android:textColor="@android:color/white"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/boton_profesor"
+        app:layout_constraintEnd_toEndOf="@+id/boton_login"
+        app:layout_constraintStart_toStartOf="@+id/boton_login"
+        app:layout_constraintTop_toBottomOf="@+id/boton_login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
